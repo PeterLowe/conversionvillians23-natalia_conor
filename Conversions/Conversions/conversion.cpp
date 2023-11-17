@@ -1,27 +1,30 @@
 // Natalia Ryl
 // Conor McDonald 
 
-char printMenu();
-void fahrenheitToCelsius();
 #include <iostream>
+
+char printMenu();
+void degreesToRadians();
+void fahrenheitToCelsius();
 
 int main()
 {
 	char userChoice;
 	userChoice = printMenu();
 
-	if (userChoice == 'f')
+	if (userChoice == 'A')
+	{
+		degreesToRadians();
+	}
+	else if (userChoice == 'f')
 	{
 		fahrenheitToCelsius();
 	}
-	
-	
 
-	
 	return 1;
 }
 
-char printMenu() // natalia
+char printMenu() // natalia & conor
 {
 	char choice = ' '; // user input choice
 	std::cout << "Please enter a upper case letter to convert from left to right and lower to convert from right to left" << std::endl;
@@ -38,6 +41,7 @@ char printMenu() // natalia
 
 	return choice;
 }
+
 void fahrenheitToCelsius() //Written By Conor McDonald
 {
 	float fahrenheit = 0.0;
@@ -48,5 +52,17 @@ void fahrenheitToCelsius() //Written By Conor McDonald
 
 	celsius = (fahrenheit - 32) * 5.0 / 9;
 	std::cout << "this is your temperature in celsius: " << celsius;
+}
 
+void degreesToRadians() // natalia
+{
+	float degrees = 0.0f;
+	float radians = 0.0f;
+
+	std::cout << "Enter degrees: " << std::endl;
+	std::cin >> degrees;
+
+	radians = degrees * 0.0175;
+
+	std::cout << "That is " << radians << " radians" << std::endl;
 }
