@@ -7,6 +7,7 @@ char printMenu();
 void degreesToRadians();
 void fahrenheitToCelsius();
 void stoneAndPoundsToKilos ();
+void kmToMpg();
 
 int main()
 {
@@ -16,6 +17,11 @@ int main()
 	if (userChoice == 'A')
 	{
 		degreesToRadians();
+
+	}
+	else if (userChoice == 'd')
+	{
+		kmToMpg(); 
 	}
 	else if (userChoice == 'f')
 	{
@@ -65,6 +71,18 @@ void stoneAndPoundsToKilos() //Written By Conor McDonald
 
 	kilograms = (stoneAndPounds * 6.35);
 	std::cout << "Your weight in Kilograms is: " << kilograms;
+}
+
+void kmToMpg() //written by Conor McDonald
+{
+	float km = 0.0;
+	float mpg = 0.0;
+
+	std::cout << "Enter your km" << std::endl;
+	std::cin >> km;
+
+	mpg = (km * 2.3521458);
+	std::cout << "your mpg is :" << std::endl;
 }
 
 
