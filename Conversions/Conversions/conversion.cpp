@@ -1,10 +1,23 @@
 // Natalia Ryl
 // Conor McDonald 
 
+char printMenu();
+void fahrenheitToCelsius();
 #include <iostream>
 
 int main()
 {
+	char userChoice;
+	userChoice = printMenu();
+
+	if (userChoice == 'f')
+	{
+		fahrenheitToCelsius();
+	}
+	
+	
+
+	
 	return 1;
 }
 
@@ -24,4 +37,16 @@ char printMenu() // natalia
 	std::cin >> choice;
 
 	return choice;
+}
+void fahrenheitToCelsius() //Written By Conor McDonald
+{
+	float fahrenheit = 0.0;
+	float celsius = 0.0;
+
+	std::cout << "Enter your temperature in Fahrebheit" << std::endl;
+	std::cin >> fahrenheit;
+
+	celsius = (fahrenheit - 32) * 5.0 / 9;
+	std::cout << "this is your temperature in celsius: " << celsius;
+
 }
