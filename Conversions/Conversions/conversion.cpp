@@ -16,6 +16,10 @@ int main()
 	{
 		degreesToRadians();
 	}
+	else if (userChoice == 'B')
+	{
+		centimetersToFeetInches();
+	}
 	else if (userChoice == 'f')
 	{
 		fahrenheitToCelsius();
@@ -42,18 +46,6 @@ char printMenu() // natalia & conor
 	return choice;
 }
 
-void fahrenheitToCelsius() //Written By Conor McDonald
-{
-	float fahrenheit = 0.0;
-	float celsius = 0.0;
-
-	std::cout << "Enter your temperature in Fahrebheit" << std::endl;
-	std::cin >> fahrenheit;
-
-	celsius = (fahrenheit - 32) * 5.0 / 9;
-	std::cout << "this is your temperature in celsius: " << celsius;
-}
-
 void degreesToRadians() // natalia
 {
 	float degrees = 0.0f;
@@ -65,4 +57,29 @@ void degreesToRadians() // natalia
 	radians = degrees * 0.0175;
 
 	std::cout << "That is " << radians << " radians" << std::endl;
+}
+
+void centimetersToFeetInches() // natalia
+{
+	float centimeters = 0.0f;
+	float feetInches = 0.0f;
+
+	std::cout << "Enter centimeters: " << std::endl;
+	std::cin >> centimeters;
+
+	feetInches = centimeters * 0.032808399;
+
+	std::cout << "That is " << feetInches << " feet and inches" << std::endl;
+}
+
+void fahrenheitToCelsius() //Written By Conor McDonald
+{
+	float fahrenheit = 0.0;
+	float celsius = 0.0;
+
+	std::cout << "Enter your temperature in Fahrebheit" << std::endl;
+	std::cin >> fahrenheit;
+
+	celsius = (fahrenheit - 32) * 5.0 / 9;
+	std::cout << "this is your temperature in celsius: " << celsius;
 }
