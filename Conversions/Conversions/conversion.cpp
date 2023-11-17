@@ -6,6 +6,8 @@
 char printMenu();
 void degreesToRadians();
 void fahrenheitToCelsius();
+void stoneAndPoundsToKilos();
+void centimetersToFeetInches();
 
 int main()
 {
@@ -19,6 +21,10 @@ int main()
 	else if (userChoice == 'B')
 	{
 		centimetersToFeetInches();
+	}
+	else if (userChoice == 'e')
+	{
+		stoneAndPoundsToKilos();
 	}
 	else if (userChoice == 'f')
 	{
@@ -48,8 +54,8 @@ char printMenu() // natalia & conor
 
 void degreesToRadians() // natalia
 {
-	float degrees = 0.0f;
-	float radians = 0.0f;
+	double degrees = 0.0;
+	double radians = 0.0;
 
 	std::cout << "Enter degrees: " << std::endl;
 	std::cin >> degrees;
@@ -61,8 +67,8 @@ void degreesToRadians() // natalia
 
 void centimetersToFeetInches() // natalia
 {
-	float centimeters = 0.0f;
-	float feetInches = 0.0f;
+	double centimeters = 0.0;
+	double feetInches = 0.0;
 
 	std::cout << "Enter centimeters: " << std::endl;
 	std::cin >> centimeters;
@@ -74,12 +80,24 @@ void centimetersToFeetInches() // natalia
 
 void fahrenheitToCelsius() //Written By Conor McDonald
 {
-	float fahrenheit = 0.0;
-	float celsius = 0.0;
+	double fahrenheit = 0.0;
+	double celsius = 0.0;
 
 	std::cout << "Enter your temperature in Fahrebheit" << std::endl;
 	std::cin >> fahrenheit;
 
 	celsius = (fahrenheit - 32) * 5.0 / 9;
 	std::cout << "this is your temperature in celsius: " << celsius;
+}
+
+void stoneAndPoundsToKilos() //Written By Conor McDonald
+{
+	double stoneAndPounds = 0.0;
+	double kilograms = 0.0;
+
+	std::cout << "Enter your weigth in Stone & Pounds" << std::endl;
+	std::cin >> stoneAndPounds;
+
+	kilograms = (stoneAndPounds * 6.35);
+	std::cout << "Your weight in Kilograms is: " << kilograms;
 }
