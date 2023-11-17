@@ -6,6 +6,7 @@
 char printMenu();
 void degreesToRadians();
 void fahrenheitToCelsius();
+void stoneAndPoundsToKilos ();
 
 int main()
 {
@@ -53,6 +54,19 @@ void fahrenheitToCelsius() //Written By Conor McDonald
 	celsius = (fahrenheit - 32) * 5.0 / 9;
 	std::cout << "this is your temperature in celsius: " << celsius;
 }
+
+void stoneAndPoundsToKilos() //Written By Conor McDonald
+{
+	float stoneAndPounds = 0.0;
+	float kilograms = 0.0;
+
+	std::cout << "Enter your weigth in Stone & Pounds" << std::endl;
+	std::cin >> stoneAndPounds;
+
+	kilograms = (stoneAndPounds * 6.35);
+	std::cout << "Your weight in Kilograms is: " << kilograms;
+}
+
 
 void degreesToRadians() // natalia
 {
